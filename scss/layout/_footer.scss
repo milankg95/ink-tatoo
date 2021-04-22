@@ -1,0 +1,35 @@
+/*FOOTER*/
+.footer {
+	background-color: $footer-gray;
+	padding-top: 150px;
+	p {
+		text-align: center;
+		margin: 0;
+		padding: 60px 0;
+		font: {
+			size: 12px;
+			weight: bold;
+		}
+	}
+}
+.footer-menu {
+	text-align: center;
+	.footer-menu--li {
+		@include navigation-list-item;
+		.footer-menu--li-link {
+			@include navigation-list-item-link;
+			background-color: transparent;
+		}
+	}
+	.footer-menu--li-logo:hover {
+		border: none;
+	}
+}
+.footer-logo {
+	@include navigation-logo;
+}
+.footer-menu--li-logo {
+	a:hover, a:active {
+		background-color: transparent;
+	}
+}

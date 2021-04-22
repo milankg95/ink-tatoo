@@ -1,0 +1,193 @@
+/*MIXINS*/
+@mixin mp-zero {
+	margin: 0;
+	padding: 0;
+}
+/*Mixins for navigation*/
+@mixin navigation {
+	border: none;
+	background-color: transparent;
+	width: 100%;
+	text-align: center;
+}
+@mixin navigation-list {
+	text-align: center;
+	@media screen and(max-width: $break-tablet){
+		overflow: hidden;
+	}
+}
+@mixin navigation-list-item {
+	display: inline-block;
+	float: none;
+	padding: 0 0 5px 0;
+	margin: 0 15px;
+	@media screen and(max-width: $break-laptop){
+		margin: 0 8px;
+	}
+	@media screen and(max-width: $break-tablet){
+		width: 100%;
+	}
+	&:active, &:hover {
+		border-bottom: 2px solid black;
+		transition: 0.2s;
+	}
+}
+@mixin navigation-list-item-link {
+	text-transform: uppercase;
+	color: black;
+	padding: 0;
+	font-weight: bold;
+	&:active, &:hover {
+		color: black;
+	}
+}
+@mixin navigation-logo {
+	margin: auto;
+	width: 250px;
+	height: auto;
+	@media screen and(max-width: $break-laptop){
+		width: 150px;
+	}
+}
+/*Mixins for team*/
+@mixin team-background {
+	height: 500px;
+	background: {
+		size: cover;
+		position: center center;
+	}
+}
+@mixin team-info {
+	background-color: $hover-background;
+	height: 500px;
+	@media screen and (max-width: $break-tablet) {
+		height: auto;
+	}
+}
+@mixin team-info-content {
+	padding: 118px 40px;
+	@media screen and (max-width: $break-mobile-l) {
+		padding: 50px 40px;
+	}
+	h4 {
+		font: {
+			size: 24px;
+			weight: bold;
+		}
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+	}
+	p {
+		font-size: 14px;
+	}
+}
+/*Mixins for page buttons*/
+@mixin page-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@mixin page-btn--button {
+	margin: auto;
+	width: 250px;
+	background: transparent;
+	border: 8px solid black;
+	&:hover {
+	background-color: black;
+	transition: 0.5s;
+	}
+}
+@mixin page-btn--button-link {
+	color: black;
+	font: {
+		size: 36px;
+		weight: bold;
+	}
+	text: {
+		decoration: none;
+		transform: uppercase;
+	}
+}
+/*Mixins for submit and message button*/
+@mixin brown-btn {
+	text-transform: uppercase;
+	background-color: $btn-background;
+	color: white;
+	border: {
+		weight: 0;
+		radius: 0;
+	}
+	&:hover {
+		background-color: black;
+		color: white;
+		transition: 0.5s;
+	}
+}
+/*Mixins for social icons*/
+@mixin list-li {
+	background-color: transparent;
+	border: none;
+	text-align: center;
+	display: inline;
+	padding-left: 0;
+}
+@mixin list-li--a {
+	text: {
+		decoration: none;
+		align: center;
+	}
+}
+@mixin list-li--a-icon {
+	color: black;
+	font-size: 36px;
+	&:hover {
+		color: $icon-hover;
+		transition: 0.5s;
+	}
+	@media screen and (max-width: $break-tablet) {
+		width: 100%;
+	}
+}
+/*Mixins for gallery images and divs*/
+@mixin gallery-div {
+	height: auto;
+	padding: 0;
+	position: relative;  
+}
+@mixin gallery-img {
+	padding: 0;
+	width: 100%;
+	display: block;
+	opacity: 1;
+}
+@mixin gallery-div-hover {
+	position: absolute;
+	top: 60%;
+	transform: translateY(-40%);
+	left: 0;
+	right: 0;
+	font-size: 24px;
+	text-align: center;
+	opacity: 0;
+	a {
+		text-decoration: none;
+		margin: 0 15px;
+		i {
+			margin: 20px 0;
+			color: black;
+			&:hover {
+				color: $icon-hover;
+				transition: 0.5s;
+			}
+		}
+	}
+}
+/*Mixins for grid 20-40*/
+@mixin padding-new-grid {
+	padding: {
+		right: 10px;
+		left: 10px;
+	}
+}

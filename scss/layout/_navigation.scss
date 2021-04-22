@@ -1,0 +1,21 @@
+/*PAGE NAVIGATION*/
+.navbar-inverse {
+	@include navigation;
+}
+.header-menu {
+	@include navigation-list;
+	.header-menu--li {
+		@include navigation-list-item;
+		.header-menu--li-link {
+			@include navigation-list-item-link;
+		}
+	}
+	.header-menu--li-logo:hover {
+		border: none;
+	}
+}
+.header-logo-link {
+}
+.header-logo {
+	@include navigation-logo;
+}

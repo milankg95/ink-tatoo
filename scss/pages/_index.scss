@@ -1,0 +1,452 @@
+/*ABOUT US*/
+.about {
+	@include mp-zero;
+}
+/*About us - left*/
+.about-left {
+	background: {
+		image: url("../img/about-top-img.jpg");
+		size: cover;
+		position: center center;
+	}
+}
+.about-btn {
+	@include page-btn;
+	padding: 215.5px 0;
+	border-radius: 0;
+	.about-btn--button {
+		@include page-btn--button;
+		&:hover .about-btn--button-link {
+			color: white;
+			transition: 0.5s;
+		}
+		.about-btn--button-link {
+			@include page-btn--button-link;
+		}
+	}
+}
+/*About us - right*/
+.about-right {
+	background-color: $smoke-white;
+	text-align: center;
+	height: 500px;
+	.about-right--div {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		h4 {
+			padding-top: 10px;
+			font-size: 18px;
+		}
+		p {
+			text-align: left;
+			padding-top: 20px;
+			font-size: 16px;
+		}
+	}
+}
+/*SUDIO GALLERY*/
+.studio-gallery {
+	@include mp-zero;
+	.studio-gallery--div {
+		@include gallery-div;
+		background-color: $hover-background;
+	}
+	.studio-gallery--div:hover img {
+		opacity: 0.3;
+	}
+	.studio-gallery--div:hover .studio-gallery--div-hover {
+		opacity: 1;
+	}
+	.studio-gallery--div img {
+		@include gallery-img;
+	}
+	.studio-gallery--div img, .studio-gallery--div-hover {
+		transition: 1s;
+	}
+	.studio-gallery--div-hover {
+		@include gallery-div-hover;
+		@media screen and (max-width: $break-1200) {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		@media screen and (max-width: $break-tablet) {
+			top: 60%;
+			transform: translateY(-40%);
+		}
+	}
+}
+/*TESTIMONIALS*/
+.testimonials {
+	height: auto;
+	padding: 0;
+	background: {
+		image: url("../img/testimonials.jpg");
+		size: cover;
+		position: top center;
+		attachment: fixed;
+	}
+	.testimonials--blockquote {
+		color: white;
+		border: none;
+		padding: 60px 0;
+		margin-bottom: 0;
+		.testimonials--blockquote-quote {
+			font-size: 150px;
+			text-align: center;
+			@media screen and(max-width: $break-laptop){
+				font-size: 100px;
+			}
+			@media screen and(max-width: $break-tablet){
+				font-size: 80px;
+			}
+		}
+		.testimonials--blockquote-quote-left {
+			padding-top: 90px;
+			@media screen and(max-width: $break-tablet){
+				padding-top: 50px;
+			}
+		}
+		p {
+			font-size: 24px;
+			padding-top: 100px;
+			text-align: center;
+			@media screen and(max-width: $break-laptop-l) {
+				padding-top: 80px;
+			}
+			@media screen and(max-width: $break-tablet){
+				padding-top: 60px;
+				font-size: 14px;
+			}
+		}
+		.testimonials--blockquote-author {
+			font-size: 14px;
+			text-transform: uppercase;
+			padding-top: 40px;
+		}
+	}
+}
+/*TEAM*/
+.team {
+	@include mp-zero;
+	.team--div {
+		@include mp-zero;
+	}
+}
+.triangle-left {
+	margin-top: 50px;
+	position: absolute;
+	margin-left: -25px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12.5px 25px 12.5px 0;
+	border-color: transparent #ccc8b6 transparent transparent;
+}
+.triangle-top {
+	position: absolute;
+	margin-top: -25px;
+	margin-left: 47%;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 12.5px 25px 12.5px;
+	border-color: transparent transparent #ccc8b6 transparent;
+}
+/*Team - box with button*/
+.team-box {
+	background: {
+		image: url("../img/team-1.jpg");
+		size: cover;
+		position: center center;
+	}
+	.team-btn {
+		@include page-btn;
+		padding: 215px 0 216px 0;
+		.team-btn--button {
+			@include page-btn--button;
+			&:hover .team-btn--button-link {
+				color: white;
+				transition: 0.5s;
+			}
+			.team-btn--button-link {
+				@include page-btn--button-link;
+			}
+		}
+	}
+}
+/*Team - corey section*/
+.corey {
+	@include team-background;
+	background-image: url("../img/team-2.jpg");
+}
+.corey-info {
+	@include team-info;
+	height: 500px;
+	.corey-info--div {
+		@include team-info-content;
+	}
+}
+.corey-info--div {
+	padding: 0 40px;
+	.corey-info--ul {
+		height: auto;
+	}
+}
+.corey-li {
+	@include list-li;
+	.corey-li--a {
+		@include list-li--a;
+		.corey-li--a-icon {
+			@include list-li--a-icon;
+		}
+	}
+}
+/*Team - kat section*/
+.kat {
+	@include team-background;
+	background-image: url("../img/team-3.jpg");
+}
+.kat-info {
+	@include team-info;
+	border-top: 1px solid black;
+	.kat-info--div {
+		@include team-info-content;
+	}
+}
+.kat-info--div {
+	padding: 0 40px;
+	.kat-info--ul {
+		height: auto;
+	}
+}
+.kat-li {
+	@include list-li;
+	.kat-li--a {
+		@include list-li--a;
+		.kat-li--a-icon {
+			@include list-li--a-icon;
+		}
+	}
+}
+/*Team - newsletter*/
+.team-newsletter {
+	height: 500px;
+	background-color: $smoke-white;
+	.team-newsletter--div {
+		padding: 167.5px 0;
+		h6 {
+			text-transform: uppercase;
+			font: {
+				size: 14px;
+				weight: bold;
+			}
+		}
+		p {
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.newsletter-email {
+	font-size: 12px;
+	border: 1px solid black;
+	border-radius: 0;
+	background-color: transparent;
+}
+.newsletter-btn {
+	@include brown-btn;
+	width: 100%;
+	font-size: 12px;
+	padding: 10px 0;
+}
+
+/*TWITTER*/
+.twitter {
+	background: {
+		image: url("../img/twitter.jpg");
+		size: cover;
+		position: center center;
+		attachment: fixed;
+	}
+}
+.twitter--div {
+	color: white;
+	text-align: center;
+	padding: 100px 0;
+	.twitter--div-link {
+		font-size: 48px;
+		color: $hover-background;
+		&:hover {
+			color: $icon-hover;
+			transition: 0.5s;
+		}
+	}
+	p {
+		text-align: left;
+		font: {
+			size: 22px;
+			style: italic;
+		}
+	}
+}
+/*GALLERY*/
+.gallery {
+	@include mp-zero;
+	height: 100%;
+	background-color: $hover-background;
+	.gallery--div {
+		@include gallery-div;
+	}
+	.gallery--div-x2 {
+		height: 100%;
+		.gallery-btn {
+			@include page-btn;
+			background-color: $hover-background;
+			.gallery-btn--button {
+				@include page-btn--button;
+				margin: {
+					top: 20%;
+					bottom: 10%;
+				}
+				@media screen and (max-width: $break-1200) {
+					margin-top: 10%;
+				}
+				&:hover .gallery-btn--button-link {
+					color: white;
+					transition: 0.5s;
+				}
+				.gallery-btn--button-link {
+					@include page-btn--button-link;
+				}
+			}
+		}
+	}
+	.gallery--div:hover img {
+		opacity: 0.3;
+	}
+	.gallery--div:hover .gallery--div-hover {
+		opacity: 1;
+	}
+	.gallery--div img {
+		@include gallery-img;
+	}
+	.gallery--div img, .gallery--div-hover {
+		transition: 1s;
+	}
+	.gallery--div-hover {
+		@include gallery-div-hover;
+	}
+}
+.gallery--div img {
+	height: auto;
+}
+/*CONTACT*/
+.contact {
+	@include mp-zero;
+	background-color: $contact-background;
+	.contact--div {
+		padding: 150px 0;
+	}
+}
+/*Contact - left*/
+
+.contact-btn {
+	@include page-btn;
+	padding: 0;
+	.contact-btn--button {
+		@include page-btn--button;
+		width: 300px;
+		padding: 15px 0;
+		&:hover .contact-btn--button-link {
+			color: white;
+			transition: 0.5s;
+		}
+		.contact-btn--button-link {
+			@include page-btn--button-link;
+		}
+	}
+}
+.contact-p {
+	font-size: 18px;
+	text-align: center;
+	padding: 50px 0;
+}
+.contact-left-info {
+	h5 {
+		text-transform: uppercase;
+		padding-bottom: 10px;
+		font: {
+			weight: bold;
+			size: 16px;
+		}
+		@media screen and (max-width: $break-tablet) {
+			text-align: center;
+		}
+	}
+	p {
+		padding: 0;
+		text: {
+			align: left;
+			transform: uppercase;
+		}
+		font: {
+			weight: thin;
+			size: 16px;
+		}
+		span {
+			font-weight: bold;
+		}
+		.contact-mail {
+			text-transform: lowercase;
+		}
+		@media screen and (max-width: $break-tablet) {
+			text-align: center;
+		}
+	}
+}
+.contact--ul {
+	padding-top: 50px;
+}
+.contact-li {
+	@include list-li;
+	.contact-li--a {
+		@include list-li--a;
+		.contact-li--a-icon {
+			@include list-li--a-icon;
+		}
+	}
+}
+/*Contact - right*/
+.contact-form-data {
+	border: 2px solid black;
+	border-radius: 0;
+	padding: 30px 10px;
+	font-size: 14px;
+	background-color: transparent;
+	margin-bottom: 55px;
+}
+.contact-form-text {
+	border: 2px solid black;
+	border-radius: 0;
+	font-size: 14px;
+	background-color: transparent;
+	height: 200px;
+	resize: none;
+	margin-bottom: 40px;
+}
+.contact-form-btn {
+	@include brown-btn;
+	width: 80%;
+	font-size: 14px;
+	padding: 20px 0;
+	@media screen and (max-width: $break-tablet) {
+		margin: 0 10%;
+	}
+}
+/*Contact - map*/
+#map {
+	width: 100%;
+	height: 100vh;
+}
